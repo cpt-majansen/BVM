@@ -19,14 +19,11 @@ export default class SDS_SectionThree extends Component {
     return (
       <div>
         <Badge pill bg="light" text="dark">
-          <h6>
-            Section 1. Identification of the substance/mixture and of of the
-            company/undertaking
-          </h6>
+          <h6>Section 3. Composition and information of ingredients</h6>
         </Badge>
         <hr />
         <Row>
-          <Col md="auto">
+          {/* <Col md="auto">
             {" "}
             <h3>Product Identifier</h3>
           </Col>
@@ -51,7 +48,7 @@ export default class SDS_SectionThree extends Component {
                 </Col>
               </Row>
             </div>
-          </Col>
+          </Col> */}
         </Row>
         <div className="mt-2 col-md-12"></div>
         <Row>
@@ -61,11 +58,27 @@ export default class SDS_SectionThree extends Component {
               className="mb-3"
               controlId="formPlaintextPassword"
             >
-              <Form.Label column sm="4">
-                Trade Name:
+              <Form.Label column sm="auto">
+                Substance:
               </Form.Label>
               <Col sm="10">
-                <Form.Control type="text" placeholder="Trade Name" />
+                <Form.Control type="text" placeholder="Substance" />
+              </Col>
+            </Form.Group>
+          </Form>
+        </Row>
+        <Row>
+          <Form>
+            <Form.Group
+              as={Row}
+              className="mb-3"
+              controlId="formPlaintextPassword"
+            >
+              <Form.Label column sm="auto">
+                Contents:
+              </Form.Label>
+              <Col sm="10">
+                <Form.Control type="text" placeholder="Contents" />
               </Col>
             </Form.Group>
           </Form>
@@ -78,10 +91,10 @@ export default class SDS_SectionThree extends Component {
               controlId="formPlaintextPassword"
             >
               <Form.Label column sm="4">
-                Trade Name:
+                CAS No:
               </Form.Label>
               <Col sm="10">
-                <Form.Control type="text" placeholder="Trade Name" />
+                <Form.Control type="text" placeholder="CAS No" />
               </Col>
             </Form.Group>
           </Form>
@@ -93,40 +106,24 @@ export default class SDS_SectionThree extends Component {
               className="mb-3"
               controlId="formPlaintextPassword"
             >
-              <Form.Label column sm="4">
-                Trade Name:
+              <Form.Label column sm="auto">
+                Index Number:
               </Form.Label>
               <Col sm="10">
-                <Form.Control type="text" placeholder="Trade Name" />
-              </Col>
-            </Form.Group>
-          </Form>
-        </Row>
-        <Row>
-          <Form>
-            <Form.Group
-              as={Row}
-              className="mb-3"
-              controlId="formPlaintextPassword"
-            >
-              <Form.Label column sm="4">
-                Trade Name:
-              </Form.Label>
-              <Col sm="10">
-                <Form.Control type="text" placeholder="Trade Name" />
+                <Form.Control type="text" placeholder="Index Number" />
               </Col>
             </Form.Group>
           </Form>
         </Row>
 
-        <div className="mt-2 col-md-12"></div>
+        {/* <div className="mt-2 col-md-12"></div>
         <Row>
           <Col md="auto">
             {" "}
             <h3>Manufacturer or Supplier Details</h3>
           </Col>
         </Row>
-        <div className="mt-2 col-md-12"></div>
+        <div className="mt-2 col-md-12"></div> */}
         <Row>
           <Form>
             <Form.Group
@@ -134,11 +131,11 @@ export default class SDS_SectionThree extends Component {
               className="mb-3"
               controlId="formPlaintextPassword"
             >
-              <Form.Label column sm="4">
-                Trade Name:
+              <Form.Label column sm="auto">
+                Hazard Statements:
               </Form.Label>
               <Col sm="10">
-                <Form.Control type="text" placeholder="Trade Name" />
+                <Form.Control type="text" placeholder="Hazard Statements" />
               </Col>
             </Form.Group>
           </Form>
@@ -150,62 +147,27 @@ export default class SDS_SectionThree extends Component {
               className="mb-3"
               controlId="formPlaintextPassword"
             >
-              <Form.Label column sm="4">
-                Trade Name:
+              <Form.Label column sm="auto">
+                EC No:
               </Form.Label>
               <Col sm="10">
-                <Form.Control type="text" placeholder="Trade Name" />
+                <Form.Control type="text" placeholder="EC No" />
               </Col>
             </Form.Group>
           </Form>
         </Row>
         <Row>
-          <Form>
-            <Form.Group
-              as={Row}
-              className="mb-3"
-              controlId="formPlaintextPassword"
-            >
-              <Form.Label column sm="4">
-                Trade Name:
-              </Form.Label>
-              <Col sm="10">
-                <Form.Control type="text" placeholder="Trade Name" />
-              </Col>
-            </Form.Group>
-          </Form>
-        </Row>
-        <Row>
-          <Form>
-            <Form.Group
-              as={Row}
-              className="mb-3"
-              controlId="formPlaintextPassword"
-            >
-              <Form.Label column sm="4">
-                Trade Name:
-              </Form.Label>
-              <Col sm="10">
-                <Form.Control type="text" placeholder="Trade Name" />
-              </Col>
-            </Form.Group>
-          </Form>
-        </Row>
-        <Row>
-          <Form>
-            <Form.Group
-              as={Row}
-              className="mb-3"
-              controlId="formPlaintextPassword"
-            >
-              <Form.Label column sm="4">
-                Trade Name:
-              </Form.Label>
-              <Col sm="10">
-                <Form.Control type="text" placeholder="Trade Name" />
-              </Col>
-            </Form.Group>
-          </Form>
+          <div className="mt-2 col-md-12"></div>
+          <Row>
+            <Col md="auto">
+              {" "}
+              <h6>
+                For the full text of the H-Statements mentioned in this section,
+                see section 16.
+              </h6>
+            </Col>
+          </Row>
+          <div className="mt-2 col-md-12"></div>
         </Row>
       </div>
     );

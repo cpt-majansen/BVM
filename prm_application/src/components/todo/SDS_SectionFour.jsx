@@ -19,16 +19,13 @@ export default class SDS_SectionFour extends Component {
     return (
       <div>
         <Badge pill bg="light" text="dark">
-          <h6>
-            Section 1. Identification of the substance/mixture and of of the
-            company/undertaking
-          </h6>
+          <h6>Section 4. First aid measures</h6>
         </Badge>
         <hr />
         <Row>
           <Col md="auto">
             {" "}
-            <h3>Product Identifier</h3>
+            <h3>Description of necessary first-aid measures</h3>
           </Col>
           <Col>
             <div className="form-container">
@@ -42,12 +39,22 @@ export default class SDS_SectionFour extends Component {
                 <div className="mt-2 col-md-12"></div>
                 <Col md="auto">
                   {" "}
-                  <Button variant="primary">Add Use</Button>
+                  <Button variant="primary">Inhalation</Button>
                 </Col>
                 <div className="mt-2 col-md-12"></div>
                 <Col md="auto">
                   {" "}
-                  <Button variant="primary">Add Company</Button>
+                  <Button variant="primary">Skin Contact</Button>
+                </Col>
+                <div className="mt-2 col-md-12"></div>
+                <Col md="auto">
+                  {" "}
+                  <Button variant="primary">Eye Contact</Button>
+                </Col>
+                <div className="mt-2 col-md-12"></div>
+                <Col md="auto">
+                  {" "}
+                  <Button variant="primary">Ingestion</Button>
                 </Col>
               </Row>
             </div>
@@ -61,11 +68,16 @@ export default class SDS_SectionFour extends Component {
               className="mb-3"
               controlId="formPlaintextPassword"
             >
-              <Form.Label column sm="4">
-                Trade Name:
+              <Form.Label column sm="auto">
+                Inhalation:
               </Form.Label>
-              <Col sm="10">
-                <Form.Control type="text" placeholder="Trade Name" />
+              <Col sm="auto">
+                <Form.Select defaultValue="Choose...">
+                  <option>Choose...</option>
+                  <option>ABC</option>
+                  <option>BIG COMPANY</option>
+                  <option>SHELL</option>
+                </Form.Select>
               </Col>
             </Form.Group>
           </Form>
@@ -77,11 +89,16 @@ export default class SDS_SectionFour extends Component {
               className="mb-3"
               controlId="formPlaintextPassword"
             >
-              <Form.Label column sm="4">
-                Trade Name:
+              <Form.Label column sm="auto">
+                Skin Contact:
               </Form.Label>
-              <Col sm="10">
-                <Form.Control type="text" placeholder="Trade Name" />
+              <Col sm="auto">
+                <Form.Select defaultValue="Choose...">
+                  <option>Choose...</option>
+                  <option>ABC</option>
+                  <option>BIG COMPANY</option>
+                  <option>SHELL</option>
+                </Form.Select>
               </Col>
             </Form.Group>
           </Form>
@@ -93,11 +110,16 @@ export default class SDS_SectionFour extends Component {
               className="mb-3"
               controlId="formPlaintextPassword"
             >
-              <Form.Label column sm="4">
-                Trade Name:
+              <Form.Label column sm="auto">
+                Eye Contact:
               </Form.Label>
-              <Col sm="10">
-                <Form.Control type="text" placeholder="Trade Name" />
+              <Col sm="auto">
+                <Form.Select defaultValue="Choose...">
+                  <option>Choose...</option>
+                  <option>ABC</option>
+                  <option>BIG COMPANY</option>
+                  <option>SHELL</option>
+                </Form.Select>
               </Col>
             </Form.Group>
           </Form>
@@ -109,18 +131,23 @@ export default class SDS_SectionFour extends Component {
               className="mb-3"
               controlId="formPlaintextPassword"
             >
-              <Form.Label column sm="4">
-                Trade Name:
+              <Form.Label column sm="auto">
+                Ingestion:
               </Form.Label>
-              <Col sm="10">
-                <Form.Control type="text" placeholder="Trade Name" />
+              <Col sm="auto">
+                <Form.Select defaultValue="Choose...">
+                  <option>Choose...</option>
+                  <option>ABC</option>
+                  <option>BIG COMPANY</option>
+                  <option>SHELL</option>
+                </Form.Select>
               </Col>
             </Form.Group>
           </Form>
         </Row>
 
         <div className="mt-2 col-md-12"></div>
-        <Row>
+        {/* <Row>
           <Col md="auto">
             {" "}
             <h3>Manufacturer or Supplier Details</h3>
@@ -206,7 +233,7 @@ export default class SDS_SectionFour extends Component {
               </Col>
             </Form.Group>
           </Form>
-        </Row>
+        </Row> */}
       </div>
     );
   }

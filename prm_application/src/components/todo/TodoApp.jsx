@@ -25,6 +25,8 @@ export default class TodoApp extends Component {
             <Route path="/newsdsform" component={NewSDSFromComponent} />
             <Route component={ErrorComponent} />
           </Switch>
+          <div className="mt-2 col-md-12"></div>
+          <div className="mt-2 col-md-12"></div>
           <FooterComponent />
         </Router>
         {/* <LoginComponent /> 

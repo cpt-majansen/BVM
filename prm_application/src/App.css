@@ -29,7 +29,7 @@
   /* Setup */
   position: center;
   width: 350px;
-  height: 250px;
+  height: auto;
 
   /* Center vertically and horizontally */
   position: absolute;
@@ -45,13 +45,13 @@
   /* Setup */
   position: center;
   width: 150px;
-  height: 250px;
+  height: 400px;
 
   /* Center vertically and horizontally */
   position: absolute;
   top: 40%;
   left: 50%;
-  transform: translate(150%, -10%);
+  transform: translate(100%, -10%);
 }
 
 .btn {

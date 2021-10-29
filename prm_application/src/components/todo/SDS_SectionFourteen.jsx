@@ -19,16 +19,13 @@ export default class SDS_SectionFourteen extends Component {
     return (
       <div>
         <Badge pill bg="light" text="dark">
-          <h6>
-            Section 1. Identification of the substance/mixture and of of the
-            company/undertaking
-          </h6>
+          <h6>Section 14. Transport information</h6>
         </Badge>
         <hr />
         <Row>
           <Col md="auto">
             {" "}
-            <h3>Product Identifier</h3>
+            <h3>ADR</h3>
           </Col>
           <Col>
             <div className="form-container">
@@ -42,12 +39,37 @@ export default class SDS_SectionFourteen extends Component {
                 <div className="mt-2 col-md-12"></div>
                 <Col md="auto">
                   {" "}
-                  <Button variant="primary">Add Use</Button>
+                  <Button variant="primary">UN Number</Button>
                 </Col>
                 <div className="mt-2 col-md-12"></div>
                 <Col md="auto">
                   {" "}
-                  <Button variant="primary">Add Company</Button>
+                  <Button variant="primary">Class</Button>
+                </Col>
+                <div className="mt-2 col-md-12"></div>
+                <Col md="auto">
+                  {" "}
+                  <Button variant="primary">Packaging Group</Button>
+                </Col>
+                <div className="mt-2 col-md-12"></div>
+                <Col md="auto">
+                  {" "}
+                  <Button variant="primary">Shipping Name</Button>
+                </Col>
+                <div className="mt-2 col-md-12"></div>
+                <Col md="auto">
+                  {" "}
+                  <Button variant="primary">Ems</Button>
+                </Col>
+                <div className="mt-2 col-md-12"></div>
+                <Col md="auto">
+                  {" "}
+                  <Button variant="primary">Marine Pollution</Button>
+                </Col>
+                <div className="mt-2 col-md-12"></div>
+                <Col md="auto">
+                  {" "}
+                  <Button variant="primary">Transport in Bulk</Button>
                 </Col>
               </Row>
             </div>
@@ -61,11 +83,16 @@ export default class SDS_SectionFourteen extends Component {
               className="mb-3"
               controlId="formPlaintextPassword"
             >
-              <Form.Label column sm="4">
-                Trade Name:
+              <Form.Label column sm="5">
+                UN Number:
               </Form.Label>
-              <Col sm="10">
-                <Form.Control type="text" placeholder="Trade Name" />
+              <Col sm="auto">
+                <Form.Select defaultValue="Choose...">
+                  <option>Choose...</option>
+                  <option>ABC</option>
+                  <option>BIG COMPANY</option>
+                  <option>SHELL</option>
+                </Form.Select>
               </Col>
             </Form.Group>
           </Form>
@@ -78,10 +105,15 @@ export default class SDS_SectionFourteen extends Component {
               controlId="formPlaintextPassword"
             >
               <Form.Label column sm="4">
-                Trade Name:
+                Class:
               </Form.Label>
-              <Col sm="10">
-                <Form.Control type="text" placeholder="Trade Name" />
+              <Col sm="auto">
+                <Form.Select defaultValue="Choose...">
+                  <option>Choose...</option>
+                  <option>ABC</option>
+                  <option>BIG COMPANY</option>
+                  <option>SHELL</option>
+                </Form.Select>
               </Col>
             </Form.Group>
           </Form>
@@ -93,11 +125,16 @@ export default class SDS_SectionFourteen extends Component {
               className="mb-3"
               controlId="formPlaintextPassword"
             >
-              <Form.Label column sm="4">
-                Trade Name:
+              <Form.Label column sm="6">
+                Packaging group:
               </Form.Label>
-              <Col sm="10">
-                <Form.Control type="text" placeholder="Trade Name" />
+              <Col sm="auto">
+                <Form.Select defaultValue="Choose...">
+                  <option>Choose...</option>
+                  <option>ABC</option>
+                  <option>BIG COMPANY</option>
+                  <option>SHELL</option>
+                </Form.Select>
               </Col>
             </Form.Group>
           </Form>
@@ -109,11 +146,16 @@ export default class SDS_SectionFourteen extends Component {
               className="mb-3"
               controlId="formPlaintextPassword"
             >
-              <Form.Label column sm="4">
-                Trade Name:
+              <Form.Label column sm="7">
+                Proper shipping name:
               </Form.Label>
-              <Col sm="10">
-                <Form.Control type="text" placeholder="Trade Name" />
+              <Col sm="auto">
+                <Form.Select defaultValue="Choose...">
+                  <option>Choose...</option>
+                  <option>ABC</option>
+                  <option>BIG COMPANY</option>
+                  <option>SHELL</option>
+                </Form.Select>
               </Col>
             </Form.Group>
           </Form>
@@ -123,7 +165,7 @@ export default class SDS_SectionFourteen extends Component {
         <Row>
           <Col md="auto">
             {" "}
-            <h3>Manufacturer or Supplier Details</h3>
+            <h3>RID</h3>
           </Col>
         </Row>
         <div className="mt-2 col-md-12"></div>
@@ -134,11 +176,16 @@ export default class SDS_SectionFourteen extends Component {
               className="mb-3"
               controlId="formPlaintextPassword"
             >
-              <Form.Label column sm="4">
-                Trade Name:
+              <Form.Label column sm="5">
+                UN Number:
               </Form.Label>
-              <Col sm="10">
-                <Form.Control type="text" placeholder="Trade Name" />
+              <Col sm="auto">
+                <Form.Select defaultValue="Choose...">
+                  <option>Choose...</option>
+                  <option>ABC</option>
+                  <option>BIG COMPANY</option>
+                  <option>SHELL</option>
+                </Form.Select>
               </Col>
             </Form.Group>
           </Form>
@@ -151,10 +198,87 @@ export default class SDS_SectionFourteen extends Component {
               controlId="formPlaintextPassword"
             >
               <Form.Label column sm="4">
-                Trade Name:
+                Class:
               </Form.Label>
-              <Col sm="10">
-                <Form.Control type="text" placeholder="Trade Name" />
+              <Col sm="auto">
+                <Form.Select defaultValue="Choose...">
+                  <option>Choose...</option>
+                  <option>ABC</option>
+                  <option>BIG COMPANY</option>
+                  <option>SHELL</option>
+                </Form.Select>
+              </Col>
+            </Form.Group>
+          </Form>
+        </Row>
+        <Row>
+          <Form>
+            <Form.Group
+              as={Row}
+              className="mb-3"
+              controlId="formPlaintextPassword"
+            >
+              <Form.Label column sm="6">
+                Packaging group:
+              </Form.Label>
+              <Col sm="auto">
+                <Form.Select defaultValue="Choose...">
+                  <option>Choose...</option>
+                  <option>ABC</option>
+                  <option>BIG COMPANY</option>
+                  <option>SHELL</option>
+                </Form.Select>
+              </Col>
+            </Form.Group>
+          </Form>
+        </Row>
+        <Row>
+          <Form>
+            <Form.Group
+              as={Row}
+              className="mb-3"
+              controlId="formPlaintextPassword"
+            >
+              <Form.Label column sm="7">
+                Proper shipping name:
+              </Form.Label>
+              <Col sm="auto">
+                <Form.Select defaultValue="Choose...">
+                  <option>Choose...</option>
+                  <option>ABC</option>
+                  <option>BIG COMPANY</option>
+                  <option>SHELL</option>
+                </Form.Select>
+              </Col>
+            </Form.Group>
+          </Form>
+        </Row>
+
+        <div className="mt-2 col-md-12"></div>
+        <Row>
+          <Col md="auto">
+            {" "}
+            <h3>ADNR</h3>
+          </Col>
+        </Row>
+        <div className="mt-2 col-md-12"></div>
+        <Row>
+          <Form>
+            <Form.Group
+              as={Row}
+              className="mb-3"
+              controlId="formPlaintextPassword"
+            >
+              <Form.Label column sm="5">
+                UN Number:
+              </Form.Label>
+              <Col sm="auto">
+                <Form.Select defaultValue="Choose...">
+                  <option>Choose...</option>
+                  <option>ABC</option>
+                  <option>BIG COMPANY</option>
+                  <option>SHELL</option>
+                </Form.Select>
               </Col>
             </Form.Group>
           </Form>
@@ -167,10 +291,87 @@ export default class SDS_SectionFourteen extends Component {
               controlId="formPlaintextPassword"
             >
               <Form.Label column sm="4">
-                Trade Name:
+                Class:
               </Form.Label>
-              <Col sm="10">
-                <Form.Control type="text" placeholder="Trade Name" />
+              <Col sm="auto">
+                <Form.Select defaultValue="Choose...">
+                  <option>Choose...</option>
+                  <option>ABC</option>
+                  <option>BIG COMPANY</option>
+                  <option>SHELL</option>
+                </Form.Select>
+              </Col>
+            </Form.Group>
+          </Form>
+        </Row>
+        <Row>
+          <Form>
+            <Form.Group
+              as={Row}
+              className="mb-3"
+              controlId="formPlaintextPassword"
+            >
+              <Form.Label column sm="6">
+                Packaging group:
+              </Form.Label>
+              <Col sm="auto">
+                <Form.Select defaultValue="Choose...">
+                  <option>Choose...</option>
+                  <option>ABC</option>
+                  <option>BIG COMPANY</option>
+                  <option>SHELL</option>
+                </Form.Select>
+              </Col>
+            </Form.Group>
+          </Form>
+        </Row>
+        <Row>
+          <Form>
+            <Form.Group
+              as={Row}
+              className="mb-3"
+              controlId="formPlaintextPassword"
+            >
+              <Form.Label column sm="7">
+                Proper shipping name:
+              </Form.Label>
+              <Col sm="auto">
+                <Form.Select defaultValue="Choose...">
+                  <option>Choose...</option>
+                  <option>ABC</option>
+                  <option>BIG COMPANY</option>
+                  <option>SHELL</option>
+                </Form.Select>
+              </Col>
+            </Form.Group>
+          </Form>
+        </Row>
+
+        <div className="mt-2 col-md-12"></div>
+        <Row>
+          <Col md="auto">
+            {" "}
+            <h3>IMDG</h3>
+          </Col>
+        </Row>
+        <div className="mt-2 col-md-12"></div>
+        <Row>
+          <Form>
+            <Form.Group
+              as={Row}
+              className="mb-3"
+              controlId="formPlaintextPassword"
+            >
+              <Form.Label column sm="5">
+                UN Number:
+              </Form.Label>
+              <Col sm="auto">
+                <Form.Select defaultValue="Choose...">
+                  <option>Choose...</option>
+                  <option>ABC</option>
+                  <option>BIG COMPANY</option>
+                  <option>SHELL</option>
+                </Form.Select>
               </Col>
             </Form.Group>
           </Form>
@@ -183,10 +384,15 @@ export default class SDS_SectionFourteen extends Component {
               controlId="formPlaintextPassword"
             >
               <Form.Label column sm="4">
-                Trade Name:
+                Class:
               </Form.Label>
-              <Col sm="10">
-                <Form.Control type="text" placeholder="Trade Name" />
+              <Col sm="auto">
+                <Form.Select defaultValue="Choose...">
+                  <option>Choose...</option>
+                  <option>ABC</option>
+                  <option>BIG COMPANY</option>
+                  <option>SHELL</option>
+                </Form.Select>
               </Col>
             </Form.Group>
           </Form>
@@ -199,10 +405,193 @@ export default class SDS_SectionFourteen extends Component {
               controlId="formPlaintextPassword"
             >
               <Form.Label column sm="4">
-                Trade Name:
+                Ems:
               </Form.Label>
-              <Col sm="10">
-                <Form.Control type="text" placeholder="Trade Name" />
+              <Col sm="auto">
+                <Form.Select defaultValue="Choose...">
+                  <option>Choose...</option>
+                  <option>ABC</option>
+                  <option>BIG COMPANY</option>
+                  <option>SHELL</option>
+                </Form.Select>
+              </Col>
+            </Form.Group>
+          </Form>
+        </Row>
+        <Row>
+          <Form>
+            <Form.Group
+              as={Row}
+              className="mb-3"
+              controlId="formPlaintextPassword"
+            >
+              <Form.Label column sm="6">
+                Packaging group:
+              </Form.Label>
+              <Col sm="auto">
+                <Form.Select defaultValue="Choose...">
+                  <option>Choose...</option>
+                  <option>ABC</option>
+                  <option>BIG COMPANY</option>
+                  <option>SHELL</option>
+                </Form.Select>
+              </Col>
+            </Form.Group>
+          </Form>
+        </Row>
+        <Row>
+          <Form>
+            <Form.Group
+              as={Row}
+              className="mb-3"
+              controlId="formPlaintextPassword"
+            >
+              <Form.Label column sm="7">
+                Proper shipping name:
+              </Form.Label>
+              <Col sm="auto">
+                <Form.Select defaultValue="Choose...">
+                  <option>Choose...</option>
+                  <option>ABC</option>
+                  <option>BIG COMPANY</option>
+                  <option>SHELL</option>
+                </Form.Select>
+              </Col>
+            </Form.Group>
+          </Form>
+        </Row>
+        <Row>
+          <Form>
+            <Form.Group
+              as={Row}
+              className="mb-3"
+              controlId="formPlaintextPassword"
+            >
+              <Form.Label column sm="6">
+                Marine pollutant:
+              </Form.Label>
+              <Col sm="auto">
+                <Form.Select defaultValue="Choose...">
+                  <option>Choose...</option>
+                  <option>ABC</option>
+                  <option>BIG COMPANY</option>
+                  <option>SHELL</option>
+                </Form.Select>
+              </Col>
+            </Form.Group>
+          </Form>
+        </Row>
+
+        <div className="mt-2 col-md-12"></div>
+        <Row>
+          <Col md="auto">
+            {" "}
+            <h3>ICAO/IATA</h3>
+          </Col>
+        </Row>
+        <div className="mt-2 col-md-12"></div>
+        <Row>
+          <Form>
+            <Form.Group
+              as={Row}
+              className="mb-3"
+              controlId="formPlaintextPassword"
+            >
+              <Form.Label column sm="5">
+                UN Number:
+              </Form.Label>
+              <Col sm="auto">
+                <Form.Select defaultValue="Choose...">
+                  <option>Choose...</option>
+                  <option>ABC</option>
+                  <option>BIG COMPANY</option>
+                  <option>SHELL</option>
+                </Form.Select>
+              </Col>
+            </Form.Group>
+          </Form>
+        </Row>
+        <Row>
+          <Form>
+            <Form.Group
+              as={Row}
+              className="mb-3"
+              controlId="formPlaintextPassword"
+            >
+              <Form.Label column sm="4">
+                Class:
+              </Form.Label>
+              <Col sm="auto">
+                <Form.Select defaultValue="Choose...">
+                  <option>Choose...</option>
+                  <option>ABC</option>
+                  <option>BIG COMPANY</option>
+                  <option>SHELL</option>
+                </Form.Select>
+              </Col>
+            </Form.Group>
+          </Form>
+        </Row>
+        <Row>
+          <Form>
+            <Form.Group
+              as={Row}
+              className="mb-3"
+              controlId="formPlaintextPassword"
+            >
+              <Form.Label column sm="6">
+                Packaging group:
+              </Form.Label>
+              <Col sm="auto">
+                <Form.Select defaultValue="Choose...">
+                  <option>Choose...</option>
+                  <option>ABC</option>
+                  <option>BIG COMPANY</option>
+                  <option>SHELL</option>
+                </Form.Select>
+              </Col>
+            </Form.Group>
+          </Form>
+        </Row>
+        <Row>
+          <Form>
+            <Form.Group
+              as={Row}
+              className="mb-3"
+              controlId="formPlaintextPassword"
+            >
+              <Form.Label column sm="7">
+                Proper shipping name:
+              </Form.Label>
+              <Col sm="auto">
+                <Form.Select defaultValue="Choose...">
+                  <option>Choose...</option>
+                  <option>ABC</option>
+                  <option>BIG COMPANY</option>
+                  <option>SHELL</option>
+                </Form.Select>
+              </Col>
+            </Form.Group>
+          </Form>
+        </Row>
+        <Row>
+          <Form>
+            <Form.Group
+              as={Row}
+              className="mb-3"
+              controlId="formPlaintextPassword"
+            >
+              <Form.Label column sm="auto">
+                Transport in bulk according to Annex II of MARPOL 73/78 and the
+                IBC Code:
+              </Form.Label>
+              <Col sm="auto">
+                <Form.Select defaultValue="Choose...">
+                  <option>Choose...</option>
+                  <option>ABC</option>
+                  <option>BIG COMPANY</option>
+                  <option>SHELL</option>
+                </Form.Select>
               </Col>
             </Form.Group>
           </Form>

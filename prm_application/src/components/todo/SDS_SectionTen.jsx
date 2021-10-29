@@ -19,17 +19,14 @@ export default class SDS_SectionTen extends Component {
     return (
       <div>
         <Badge pill bg="light" text="dark">
-          <h6>
-            Section 1. Identification of the substance/mixture and of of the
-            company/undertaking
-          </h6>
+          <h6>Section 10. Stability and Reactivity</h6>
         </Badge>
         <hr />
         <Row>
-          <Col md="auto">
+          {/* <Col md="auto">
             {" "}
             <h3>Product Identifier</h3>
-          </Col>
+          </Col> */}
           <Col>
             <div className="form-container">
               <Row>
@@ -42,12 +39,32 @@ export default class SDS_SectionTen extends Component {
                 <div className="mt-2 col-md-12"></div>
                 <Col md="auto">
                   {" "}
-                  <Button variant="primary">Add Use</Button>
+                  <Button variant="primary">Reactivity</Button>
                 </Col>
                 <div className="mt-2 col-md-12"></div>
                 <Col md="auto">
                   {" "}
-                  <Button variant="primary">Add Company</Button>
+                  <Button variant="primary">Chemical Stability</Button>
+                </Col>
+                <div className="mt-2 col-md-12"></div>
+                <Col md="auto">
+                  {" "}
+                  <Button variant="primary">Posibility of Hazard</Button>
+                </Col>
+                <div className="mt-2 col-md-12"></div>
+                <Col md="auto">
+                  {" "}
+                  <Button variant="primary">Conditions to Avoid</Button>
+                </Col>
+                <div className="mt-2 col-md-12"></div>
+                <Col md="auto">
+                  {" "}
+                  <Button variant="primary">Materials to Avoid</Button>
+                </Col>
+                <div className="mt-2 col-md-12"></div>
+                <Col md="auto">
+                  {" "}
+                  <Button variant="primary">Hazardous Decomposition</Button>
                 </Col>
               </Row>
             </div>
@@ -61,11 +78,16 @@ export default class SDS_SectionTen extends Component {
               className="mb-3"
               controlId="formPlaintextPassword"
             >
-              <Form.Label column sm="4">
-                Trade Name:
+              <Form.Label column sm="auto">
+                Reactivity:
               </Form.Label>
-              <Col sm="10">
-                <Form.Control type="text" placeholder="Trade Name" />
+              <Col sm="auto">
+                <Form.Select defaultValue="Choose...">
+                  <option>Choose...</option>
+                  <option>ABC</option>
+                  <option>BIG COMPANY</option>
+                  <option>SHELL</option>
+                </Form.Select>
               </Col>
             </Form.Group>
           </Form>
@@ -77,11 +99,16 @@ export default class SDS_SectionTen extends Component {
               className="mb-3"
               controlId="formPlaintextPassword"
             >
-              <Form.Label column sm="4">
-                Trade Name:
+              <Form.Label column sm="auto">
+                Chemical Stability:
               </Form.Label>
-              <Col sm="10">
-                <Form.Control type="text" placeholder="Trade Name" />
+              <Col sm="auto">
+                <Form.Select defaultValue="Choose...">
+                  <option>Choose...</option>
+                  <option>ABC</option>
+                  <option>BIG COMPANY</option>
+                  <option>SHELL</option>
+                </Form.Select>
               </Col>
             </Form.Group>
           </Form>
@@ -93,11 +120,16 @@ export default class SDS_SectionTen extends Component {
               className="mb-3"
               controlId="formPlaintextPassword"
             >
-              <Form.Label column sm="4">
-                Trade Name:
+              <Form.Label column sm="auto">
+                Possibility of Hazardous reactions:
               </Form.Label>
-              <Col sm="10">
-                <Form.Control type="text" placeholder="Trade Name" />
+              <Col sm="auto">
+                <Form.Select defaultValue="Choose...">
+                  <option>Choose...</option>
+                  <option>ABC</option>
+                  <option>BIG COMPANY</option>
+                  <option>SHELL</option>
+                </Form.Select>
               </Col>
             </Form.Group>
           </Form>
@@ -109,18 +141,65 @@ export default class SDS_SectionTen extends Component {
               className="mb-3"
               controlId="formPlaintextPassword"
             >
-              <Form.Label column sm="4">
-                Trade Name:
+              <Form.Label column sm="auto">
+                Conditions to avoid:
               </Form.Label>
-              <Col sm="10">
-                <Form.Control type="text" placeholder="Trade Name" />
+              <Col sm="auto">
+                <Form.Select defaultValue="Choose...">
+                  <option>Choose...</option>
+                  <option>ABC</option>
+                  <option>BIG COMPANY</option>
+                  <option>SHELL</option>
+                </Form.Select>
+              </Col>
+            </Form.Group>
+          </Form>
+        </Row>
+        <Row>
+          <Form>
+            <Form.Group
+              as={Row}
+              className="mb-3"
+              controlId="formPlaintextPassword"
+            >
+              <Form.Label column sm="auto">
+                Materials to avoid:
+              </Form.Label>
+              <Col sm="auto">
+                <Form.Select defaultValue="Choose...">
+                  <option>Choose...</option>
+                  <option>ABC</option>
+                  <option>BIG COMPANY</option>
+                  <option>SHELL</option>
+                </Form.Select>
+              </Col>
+            </Form.Group>
+          </Form>
+        </Row>
+        <Row>
+          <Form>
+            <Form.Group
+              as={Row}
+              className="mb-3"
+              controlId="formPlaintextPassword"
+            >
+              <Form.Label column sm="auto">
+                Hazardous decomposition of products:
+              </Form.Label>
+              <Col sm="auto">
+                <Form.Select defaultValue="Choose...">
+                  <option>Choose...</option>
+                  <option>ABC</option>
+                  <option>BIG COMPANY</option>
+                  <option>SHELL</option>
+                </Form.Select>
               </Col>
             </Form.Group>
           </Form>
         </Row>
 
         <div className="mt-2 col-md-12"></div>
-        <Row>
+        {/* <Row>
           <Col md="auto">
             {" "}
             <h3>Manufacturer or Supplier Details</h3>
@@ -206,7 +285,7 @@ export default class SDS_SectionTen extends Component {
               </Col>
             </Form.Group>
           </Form>
-        </Row>
+        </Row> */}
       </div>
     );
   }

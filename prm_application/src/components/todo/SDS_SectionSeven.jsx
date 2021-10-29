@@ -19,10 +19,7 @@ export default class SDS_SectionSeven extends Component {
     return (
       <div>
         <Badge pill bg="light" text="dark">
-          <h6>
-            Section 1. Identification of the substance/mixture and of of the
-            company/undertaking
-          </h6>
+          <h6>Section 7. Handling and storage</h6>
         </Badge>
         <hr />
         <Row>
@@ -42,12 +39,32 @@ export default class SDS_SectionSeven extends Component {
                 <div className="mt-2 col-md-12"></div>
                 <Col md="auto">
                   {" "}
-                  <Button variant="primary">Add Use</Button>
+                  <Button variant="primary">Safe Handling Advice</Button>
                 </Col>
                 <div className="mt-2 col-md-12"></div>
                 <Col md="auto">
                   {" "}
-                  <Button variant="primary">Add Company</Button>
+                  <Button variant="primary">Advice on Protection</Button>
+                </Col>
+                <div className="mt-2 col-md-12"></div>
+                <Col md="auto">
+                  {" "}
+                  <Button variant="primary">Temperature Class</Button>
+                </Col>
+                <div className="mt-2 col-md-12"></div>
+                <Col md="auto">
+                  {" "}
+                  <Button variant="primary">Fire Fighting Class</Button>
+                </Col>
+                <div className="mt-2 col-md-12"></div>
+                <Col md="auto">
+                  {" "}
+                  <Button variant="primary">Requirements for Storage</Button>
+                </Col>
+                <div className="mt-2 col-md-12"></div>
+                <Col md="auto">
+                  {" "}
+                  <Button variant="primary">Advice on Common Storage</Button>
                 </Col>
               </Row>
             </div>
@@ -61,11 +78,16 @@ export default class SDS_SectionSeven extends Component {
               className="mb-3"
               controlId="formPlaintextPassword"
             >
-              <Form.Label column sm="4">
-                Trade Name:
+              <Form.Label column sm="auto">
+                Safe handling advice:
               </Form.Label>
-              <Col sm="10">
-                <Form.Control type="text" placeholder="Trade Name" />
+              <Col sm="auto">
+                <Form.Select defaultValue="Choose...">
+                  <option>Choose...</option>
+                  <option>ABC</option>
+                  <option>BIG COMPANY</option>
+                  <option>SHELL</option>
+                </Form.Select>
               </Col>
             </Form.Group>
           </Form>
@@ -77,11 +99,16 @@ export default class SDS_SectionSeven extends Component {
               className="mb-3"
               controlId="formPlaintextPassword"
             >
-              <Form.Label column sm="4">
-                Trade Name:
+              <Form.Label column sm="auto">
+                Advice on protection against fire and explosion:
               </Form.Label>
-              <Col sm="10">
-                <Form.Control type="text" placeholder="Trade Name" />
+              <Col sm="auto">
+                <Form.Select defaultValue="Choose...">
+                  <option>Choose...</option>
+                  <option>ABC</option>
+                  <option>BIG COMPANY</option>
+                  <option>SHELL</option>
+                </Form.Select>
               </Col>
             </Form.Group>
           </Form>
@@ -93,11 +120,16 @@ export default class SDS_SectionSeven extends Component {
               className="mb-3"
               controlId="formPlaintextPassword"
             >
-              <Form.Label column sm="4">
-                Trade Name:
+              <Form.Label column sm="auto">
+                Temperature class:
               </Form.Label>
-              <Col sm="10">
-                <Form.Control type="text" placeholder="Trade Name" />
+              <Col sm="auto">
+                <Form.Select defaultValue="Choose...">
+                  <option>Choose...</option>
+                  <option>ABC</option>
+                  <option>BIG COMPANY</option>
+                  <option>SHELL</option>
+                </Form.Select>
               </Col>
             </Form.Group>
           </Form>
@@ -109,18 +141,65 @@ export default class SDS_SectionSeven extends Component {
               className="mb-3"
               controlId="formPlaintextPassword"
             >
-              <Form.Label column sm="4">
-                Trade Name:
+              <Form.Label column sm="auto">
+                Fire fighting class:
               </Form.Label>
-              <Col sm="10">
-                <Form.Control type="text" placeholder="Trade Name" />
+              <Col sm="auto">
+                <Form.Select defaultValue="Choose...">
+                  <option>Choose...</option>
+                  <option>ABC</option>
+                  <option>BIG COMPANY</option>
+                  <option>SHELL</option>
+                </Form.Select>
+              </Col>
+            </Form.Group>
+          </Form>
+        </Row>
+        <Row>
+          <Form>
+            <Form.Group
+              as={Row}
+              className="mb-3"
+              controlId="formPlaintextPassword"
+            >
+              <Form.Label column sm="auto">
+                Requirements for storage areas and containers:
+              </Form.Label>
+              <Col sm="auto">
+                <Form.Select defaultValue="Choose...">
+                  <option>Choose...</option>
+                  <option>ABC</option>
+                  <option>BIG COMPANY</option>
+                  <option>SHELL</option>
+                </Form.Select>
+              </Col>
+            </Form.Group>
+          </Form>
+        </Row>
+        <Row>
+          <Form>
+            <Form.Group
+              as={Row}
+              className="mb-3"
+              controlId="formPlaintextPassword"
+            >
+              <Form.Label column sm="auto">
+                Advice on common storage:
+              </Form.Label>
+              <Col sm="auto">
+                <Form.Select defaultValue="Choose...">
+                  <option>Choose...</option>
+                  <option>ABC</option>
+                  <option>BIG COMPANY</option>
+                  <option>SHELL</option>
+                </Form.Select>
               </Col>
             </Form.Group>
           </Form>
         </Row>
 
         <div className="mt-2 col-md-12"></div>
-        <Row>
+        {/* <Row>
           <Col md="auto">
             {" "}
             <h3>Manufacturer or Supplier Details</h3>
@@ -206,7 +285,7 @@ export default class SDS_SectionSeven extends Component {
               </Col>
             </Form.Group>
           </Form>
-        </Row>
+        </Row> */}
       </div>
     );
   }

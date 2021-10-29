@@ -13,22 +13,20 @@ import TabPane from "react-bootstrap/TabPane";
 import Nav from "react-bootstrap/Nav";
 import Badge from "react-bootstrap/Badge";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
+import Table from "react-bootstrap/Table";
 
 export default class SDS_SectionEight extends Component {
   render() {
     return (
       <div>
         <Badge pill bg="light" text="dark">
-          <h6>
-            Section 1. Identification of the substance/mixture and of of the
-            company/undertaking
-          </h6>
+          <h6>Section 8. Exposure controls/personal protection</h6>
         </Badge>
         <hr />
         <Row>
           <Col md="auto">
             {" "}
-            <h3>Product Identifier</h3>
+            <h3>Components with workplace control parameters</h3>
           </Col>
           <Col>
             <div className="form-container">
@@ -42,12 +40,32 @@ export default class SDS_SectionEight extends Component {
                 <div className="mt-2 col-md-12"></div>
                 <Col md="auto">
                   {" "}
-                  <Button variant="primary">Add Use</Button>
+                  <Button variant="primary">Engineering Measures</Button>
                 </Col>
                 <div className="mt-2 col-md-12"></div>
                 <Col md="auto">
                   {" "}
-                  <Button variant="primary">Add Company</Button>
+                  <Button variant="primary">Respiratory Protection</Button>
+                </Col>
+                <div className="mt-2 col-md-12"></div>
+                <Col md="auto">
+                  {" "}
+                  <Button variant="primary">Hand Protection</Button>
+                </Col>
+                <div className="mt-2 col-md-12"></div>
+                <Col md="auto">
+                  {" "}
+                  <Button variant="primary">Eye Protection</Button>
+                </Col>
+                <div className="mt-2 col-md-12"></div>
+                <Col md="auto">
+                  {" "}
+                  <Button variant="primary">Skin and Body Protection</Button>
+                </Col>
+                <div className="mt-2 col-md-12"></div>
+                <Col md="auto">
+                  {" "}
+                  <Button variant="primary">Hygiene Measures</Button>
                 </Col>
               </Row>
             </div>
@@ -61,59 +79,30 @@ export default class SDS_SectionEight extends Component {
               className="mb-3"
               controlId="formPlaintextPassword"
             >
-              <Form.Label column sm="4">
-                Trade Name:
+              <Form.Label column sm="auto">
+                NATIONAL OCCUPATIONAL EXPOSURE LIMITS:
               </Form.Label>
               <Col sm="10">
-                <Form.Control type="text" placeholder="Trade Name" />
-              </Col>
-            </Form.Group>
-          </Form>
-        </Row>
-        <Row>
-          <Form>
-            <Form.Group
-              as={Row}
-              className="mb-3"
-              controlId="formPlaintextPassword"
-            >
-              <Form.Label column sm="4">
-                Trade Name:
-              </Form.Label>
-              <Col sm="10">
-                <Form.Control type="text" placeholder="Trade Name" />
-              </Col>
-            </Form.Group>
-          </Form>
-        </Row>
-        <Row>
-          <Form>
-            <Form.Group
-              as={Row}
-              className="mb-3"
-              controlId="formPlaintextPassword"
-            >
-              <Form.Label column sm="4">
-                Trade Name:
-              </Form.Label>
-              <Col sm="10">
-                <Form.Control type="text" placeholder="Trade Name" />
-              </Col>
-            </Form.Group>
-          </Form>
-        </Row>
-        <Row>
-          <Form>
-            <Form.Group
-              as={Row}
-              className="mb-3"
-              controlId="formPlaintextPassword"
-            >
-              <Form.Label column sm="4">
-                Trade Name:
-              </Form.Label>
-              <Col sm="10">
-                <Form.Control type="text" placeholder="Trade Name" />
+                <Table striped bordered hover>
+                  <thead>
+                    <tr>
+                      <th>Components</th>
+                      <th>Type</th>
+                      <th>Control Parameters</th>
+                      <th>Update</th>
+                      <th>basis</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>x</td>
+                      <td>x</td>
+                      <td>x</td>
+                      <td>x</td>
+                      <td>x</td>
+                    </tr>
+                  </tbody>
+                </Table>
               </Col>
             </Form.Group>
           </Form>
@@ -123,7 +112,7 @@ export default class SDS_SectionEight extends Component {
         <Row>
           <Col md="auto">
             {" "}
-            <h3>Manufacturer or Supplier Details</h3>
+            <h3>Exposure Control</h3>
           </Col>
         </Row>
         <div className="mt-2 col-md-12"></div>
@@ -134,11 +123,45 @@ export default class SDS_SectionEight extends Component {
               className="mb-3"
               controlId="formPlaintextPassword"
             >
-              <Form.Label column sm="4">
-                Trade Name:
+              <Form.Label column sm="auto">
+                Engineering measures:
               </Form.Label>
-              <Col sm="10">
-                <Form.Control type="text" placeholder="Trade Name" />
+              <Col sm="auto">
+                <Form.Select defaultValue="Choose...">
+                  <option>Choose...</option>
+                  <option>ABC</option>
+                  <option>BIG COMPANY</option>
+                  <option>SHELL</option>
+                </Form.Select>
+              </Col>
+            </Form.Group>
+          </Form>
+        </Row>
+        <div className="mt-2 col-md-12"></div>
+        <Row>
+          <Col md="auto">
+            {" "}
+            <h3>Personal Protective Equipment</h3>
+          </Col>
+        </Row>
+        <div className="mt-2 col-md-12"></div>
+        <Row>
+          <Form>
+            <Form.Group
+              as={Row}
+              className="mb-3"
+              controlId="formPlaintextPassword"
+            >
+              <Form.Label column sm="auto">
+                Respiratory protection:
+              </Form.Label>
+              <Col sm="auto">
+                <Form.Select defaultValue="Choose...">
+                  <option>Choose...</option>
+                  <option>ABC</option>
+                  <option>BIG COMPANY</option>
+                  <option>SHELL</option>
+                </Form.Select>
               </Col>
             </Form.Group>
           </Form>
@@ -150,11 +173,16 @@ export default class SDS_SectionEight extends Component {
               className="mb-3"
               controlId="formPlaintextPassword"
             >
-              <Form.Label column sm="4">
-                Trade Name:
+              <Form.Label column sm="auto">
+                Hand protection:
               </Form.Label>
-              <Col sm="10">
-                <Form.Control type="text" placeholder="Trade Name" />
+              <Col sm="auto">
+                <Form.Select defaultValue="Choose...">
+                  <option>Choose...</option>
+                  <option>ABC</option>
+                  <option>BIG COMPANY</option>
+                  <option>SHELL</option>
+                </Form.Select>
               </Col>
             </Form.Group>
           </Form>
@@ -166,11 +194,16 @@ export default class SDS_SectionEight extends Component {
               className="mb-3"
               controlId="formPlaintextPassword"
             >
-              <Form.Label column sm="4">
-                Trade Name:
+              <Form.Label column sm="auto">
+                Eye protection:
               </Form.Label>
-              <Col sm="10">
-                <Form.Control type="text" placeholder="Trade Name" />
+              <Col sm="auto">
+                <Form.Select defaultValue="Choose...">
+                  <option>Choose...</option>
+                  <option>ABC</option>
+                  <option>BIG COMPANY</option>
+                  <option>SHELL</option>
+                </Form.Select>
               </Col>
             </Form.Group>
           </Form>
@@ -182,11 +215,16 @@ export default class SDS_SectionEight extends Component {
               className="mb-3"
               controlId="formPlaintextPassword"
             >
-              <Form.Label column sm="4">
-                Trade Name:
+              <Form.Label column sm="auto">
+                Skin and body protection:
               </Form.Label>
-              <Col sm="10">
-                <Form.Control type="text" placeholder="Trade Name" />
+              <Col sm="auto">
+                <Form.Select defaultValue="Choose...">
+                  <option>Choose...</option>
+                  <option>ABC</option>
+                  <option>BIG COMPANY</option>
+                  <option>SHELL</option>
+                </Form.Select>
               </Col>
             </Form.Group>
           </Form>
@@ -198,11 +236,16 @@ export default class SDS_SectionEight extends Component {
               className="mb-3"
               controlId="formPlaintextPassword"
             >
-              <Form.Label column sm="4">
-                Trade Name:
+              <Form.Label column sm="auto">
+                Hygiene measures:
               </Form.Label>
-              <Col sm="10">
-                <Form.Control type="text" placeholder="Trade Name" />
+              <Col sm="auto">
+                <Form.Select defaultValue="Choose...">
+                  <option>Choose...</option>
+                  <option>ABC</option>
+                  <option>BIG COMPANY</option>
+                  <option>SHELL</option>
+                </Form.Select>
               </Col>
             </Form.Group>
           </Form>

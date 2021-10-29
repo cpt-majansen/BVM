@@ -19,14 +19,11 @@ export default class SDS_SectionThirteen extends Component {
     return (
       <div>
         <Badge pill bg="light" text="dark">
-          <h6>
-            Section 1. Identification of the substance/mixture and of of the
-            company/undertaking
-          </h6>
+          <h6>Section 13. Disposal consideration</h6>
         </Badge>
         <hr />
         <Row>
-          <Col md="auto">
+          {/* <Col md="auto">
             {" "}
             <h3>Product Identifier</h3>
           </Col>
@@ -51,7 +48,7 @@ export default class SDS_SectionThirteen extends Component {
                 </Col>
               </Row>
             </div>
-          </Col>
+          </Col> */}
         </Row>
         <div className="mt-2 col-md-12"></div>
         <Row>
@@ -62,15 +59,15 @@ export default class SDS_SectionThirteen extends Component {
               controlId="formPlaintextPassword"
             >
               <Form.Label column sm="4">
-                Trade Name:
+                Product:
               </Form.Label>
               <Col sm="10">
-                <Form.Control type="text" placeholder="Trade Name" />
+                <Form.Control type="text" placeholder="" />
               </Col>
             </Form.Group>
           </Form>
         </Row>
-        <Row>
+        {/* <Row>
           <Form>
             <Form.Group
               as={Row}
@@ -206,7 +203,7 @@ export default class SDS_SectionThirteen extends Component {
               </Col>
             </Form.Group>
           </Form>
-        </Row>
+        </Row> */}
       </div>
     );
   }
