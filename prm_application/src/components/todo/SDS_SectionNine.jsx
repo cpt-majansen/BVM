@@ -28,7 +28,7 @@ export default class SDS_SectionNine extends Component {
             <h3>Information on basic physical and chemical properties</h3>
           </Col>
           <Col>
-            <div className="form-container">
+            <div className="add-new-form">
               <Row>
                 <Col md="auto">
                   <div className="mt-2 col-md-12"></div>

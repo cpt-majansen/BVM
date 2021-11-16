@@ -28,7 +28,7 @@ export default class SDS_SectionTwo extends Component {
             <h3>Classification of the substance or mixture</h3>
           </Col>
           <Col>
-            <div className="form-container">
+            <div className="add-new-form">
               <Row>
                 <Col md="auto">
                   <div className="mt-2 col-md-12"></div>
@@ -126,14 +126,14 @@ export default class SDS_SectionTwo extends Component {
                   <option>SHELL</option>
                 </Form.Select>
               </Col>
-              <Col sm="auto">
+              {/* <Col sm="auto">
                 <Form.Select defaultValue="Choose...">
                   <option>Choose...</option>
                   <option>ABC</option>
                   <option>BIG COMPANY</option>
                   <option>SHELL</option>
                 </Form.Select>
-              </Col>
+              </Col> */}
             </Form.Group>
           </Form>
         </Row>

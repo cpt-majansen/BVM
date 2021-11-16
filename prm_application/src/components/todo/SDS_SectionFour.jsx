@@ -28,7 +28,7 @@ export default class SDS_SectionFour extends Component {
             <h3>Description of necessary first-aid measures</h3>
           </Col>
           <Col>
-            <div className="form-container">
+            <div className="add-new-form">
               <Row>
                 <Col md="auto">
                   <div className="mt-2 col-md-12"></div>
