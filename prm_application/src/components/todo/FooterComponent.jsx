@@ -16,6 +16,7 @@ export default class FooterComponent extends Component {
   render() {
     return (
       <footer className="footer">
+        <div className="mt-2 col-md-12"></div>
         <span className="text-muted">
           All Rights Reserved 2021 BVM Product Risk Management
         </span>

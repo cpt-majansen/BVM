@@ -11,10 +11,6 @@ import TabContainer from "react-bootstrap/TabContainer";
 import TabContent from "react-bootstrap/TabContent";
 import TabPane from "react-bootstrap/TabPane";
 import Nav from "react-bootstrap/Nav";
-// import React from "react";
-import { Page, Text, View, Document, StyleSheet } from "@react-pdf/renderer";
-import ReactPDF from "@react-pdf/renderer";
-import { PDFViewer } from "@react-pdf/renderer";
 
 export default class LoginComponent extends Component {
   constructor(props) {

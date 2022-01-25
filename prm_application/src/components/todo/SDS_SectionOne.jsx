@@ -15,6 +15,35 @@ import Badge from "react-bootstrap/Badge";
 import FloatingLabel from "react-bootstrap/FloatingLabel";
 
 export default class SDS_SectionOne extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      tradeName: "",
+      synonyms: "",
+      productCode: "",
+      use: "",
+      company: "",
+      address: "",
+      telephone: "",
+      email: "",
+      emergencyTelephone: "",
+    };
+
+    this.saveClicked = this.saveClicked.bind(this);
+  }
+
+  saveClicked() {
+    this.props.data.setTradeName(this.state.tradeName);
+    this.props.data.setSynonyms(this.state.synonyms);
+    this.props.data.setProductCode(this.state.productCode);
+    this.props.data.setUse(this.state.use);
+    this.props.data.setCompany(this.state.company);
+    this.props.data.setAddress(this.state.address);
+    this.props.data.setTelephone(this.state.telephone);
+    this.props.data.setEmail(this.state.email);
+    this.props.data.setEmergencyTelephone(this.state.emergencyTelephone);
+  }
+
   render() {
     return (
       <div>
@@ -65,7 +94,12 @@ export default class SDS_SectionOne extends Component {
                 Trade Name:
               </Form.Label>
               <Col sm="10">
-                <Form.Control type="text" placeholder="Trade Name" />
+                <Form.Control
+                  type="text"
+                  placeholder="Trade Name"
+                  value={this.state.tradeName}
+                  onChange={(e) => this.setState({ tradeName: e.target.value })}
+                />
               </Col>
             </Form.Group>
           </Form>
@@ -81,7 +115,12 @@ export default class SDS_SectionOne extends Component {
                 Synonyms:
               </Form.Label>
               <Col sm="10">
-                <Form.Control type="text" placeholder="Synonyms" />
+                <Form.Control
+                  type="text"
+                  placeholder="Synonyms"
+                  value={this.state.synonyms}
+                  onChange={(e) => this.setState({ synonyms: e.target.value })}
+                />
               </Col>
             </Form.Group>
           </Form>
@@ -97,7 +136,14 @@ export default class SDS_SectionOne extends Component {
                 Product Code:
               </Form.Label>
               <Col sm="10">
-                <Form.Control type="text" placeholder="Product Code" />
+                <Form.Control
+                  type="text"
+                  placeholder="Product Code"
+                  value={this.state.productCode}
+                  onChange={(e) =>
+                    this.setState({ productCode: e.target.value })
+                  }
+                />
               </Col>
             </Form.Group>
           </Form>
@@ -113,9 +159,14 @@ export default class SDS_SectionOne extends Component {
                 Use:
               </Form.Label>
               <Col sm="10">
-                <Form.Select defaultValue="Choose...">
+                <Form.Select
+                  defaultValue="Choose..."
+                  onChange={(e) => this.setState({ use: e.target.value })}
+                >
                   <option>Choose...</option>
-                  <option>...</option>
+                  <option>Soap</option>
+                  <option>Petrol</option>
+                  <option>Bleach</option>
                 </Form.Select>
               </Col>
             </Form.Group>
@@ -141,7 +192,10 @@ export default class SDS_SectionOne extends Component {
                 Company:
               </Form.Label>
               <Col sm="10">
-                <Form.Select defaultValue="Choose...">
+                <Form.Select
+                  defaultValue="Choose..."
+                  onChange={(e) => this.setState({ company: e.target.value })}
+                >
                   <option>Choose...</option>
                   <option>ABC</option>
                   <option>BIG COMPANY</option>
@@ -162,7 +216,12 @@ export default class SDS_SectionOne extends Component {
                 Address:
               </Form.Label>
               <Col sm="10">
-                <Form.Control type="text" placeholder="Address" />
+                <Form.Control
+                  type="text"
+                  placeholder="Address"
+                  value={this.state.address}
+                  onChange={(e) => this.setState({ address: e.target.value })}
+                />
               </Col>
             </Form.Group>
           </Form>
@@ -178,7 +237,12 @@ export default class SDS_SectionOne extends Component {
                 Telephone:
               </Form.Label>
               <Col sm="10">
-                <Form.Control type="text" placeholder="021 123 4567" />
+                <Form.Control
+                  type="text"
+                  placeholder="021 123 4567"
+                  value={this.state.telephone}
+                  onChange={(e) => this.setState({ telephone: e.target.value })}
+                />
               </Col>
             </Form.Group>
           </Form>
@@ -194,7 +258,12 @@ export default class SDS_SectionOne extends Component {
                 Email Address:
               </Form.Label>
               <Col sm="10">
-                <Form.Control type="text" placeholder="example@abc.co.za" />
+                <Form.Control
+                  type="text"
+                  placeholder="example@abc.co.za"
+                  value={this.state.email}
+                  onChange={(e) => this.setState({ email: e.target.value })}
+                />
               </Col>
             </Form.Group>
           </Form>
@@ -210,11 +279,36 @@ export default class SDS_SectionOne extends Component {
                 Emergency Telephone Number:
               </Form.Label>
               <Col sm="10">
-                <Form.Control type="text" placeholder="021 987 9876" />
+                <Form.Control
+                  type="text"
+                  placeholder="021 987 9876"
+                  value={this.state.emergencyTelephone}
+                  onChange={(e) =>
+                    this.setState({ emergencyTelephone: e.target.value })
+                  }
+                />
               </Col>
             </Form.Group>
           </Form>
         </Row>
+        {/* <div className="mt-2 col-md-12"></div>
+        <button className="btn btn=s" onClick={this.saveClicked}>
+          Save Section
+        </button>
+        <div className="mt-5 col-md-12"></div> */}
+        <Container>
+          <Row xs="auto">
+            <Col>
+              <div className="mt-2 col-md-12"></div>
+              <button className="btn btn=s" onClick={this.saveClicked}>
+                Save Section
+              </button>
+              <div className="mt-5 col-md-12"></div>
+            </Col>
+            <Col></Col>
+            <Col></Col>
+          </Row>
+        </Container>
       </div>
     );
   }

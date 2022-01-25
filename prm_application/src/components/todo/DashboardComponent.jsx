@@ -21,7 +21,9 @@ export default class DashboardComponent extends Component {
   render() {
     return (
       <div>
+        <hr />
         <h1>DASHBOARD</h1>
+        <hr />
         <div className="container">
           <h2>Product Classification</h2>
           <button>x</button>

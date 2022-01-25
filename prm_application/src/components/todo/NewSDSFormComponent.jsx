@@ -34,10 +34,116 @@ export default class NewSDSFromComponent extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      tradename: "",
+      tradeName: "",
       synonyms: "",
+      productCode: "",
+      use: "",
+      company: "",
+      address: "",
+      telephone: "",
+      email: "",
+      emergencyTelephone: "",
+      ghgClassification: "",
+      ghsLabelElements: "",
+      signalWord: "",
+      hazardStatement: "",
+      prevention: "",
+      response: "",
+      storage: "",
+      disposal: "",
+      otherHazards: "",
     };
-    this.handleChange = this.handleChange.bind(this);
+    this.saveSDSForm = this.saveSDSForm.bind(this);
+    // this.callbackFunction = this.callbackFunction.bind(this);
+    // this.changeState = this.changeState.bind(this);
+  }
+
+  // changeState(item) {
+  //   this.setState({ tradeName: item[0] });
+  //   this.setState({ synonyms: item[1] });
+  //   this.setState({ productCode: item[2] });
+  //   this.setState({ use: item[3] });
+  //   this.setState({ company: item[4] });
+  //   this.setState({ address: item[5] });
+  //   this.setState({ telephone: item[6] });
+  //   this.setState({ email: item[7] });
+  //   this.setState({ emergencyTelephone: item[8] });
+  //   // this.setState({ [item.target.name]: item.target.value });
+  // }
+  setTradeName(item) {
+    this.setState({ tradeName: item });
+  }
+  setSynonyms(item) {
+    this.setState({ synonyms: item });
+  }
+  setProductCode(item) {
+    this.setState({ productCode: item });
+  }
+  setUse(item) {
+    this.setState({ use: item });
+  }
+  setCompany(item) {
+    this.setState({ company: item });
+  }
+  setAddress(item) {
+    this.setState({ address: item });
+  }
+  setTelephone(item) {
+    this.setState({ telephone: item });
+  }
+  setEmail(item) {
+    this.setState({ email: item });
+  }
+  setEmergencyTelephone(item) {
+    this.setState({ emergencyTelephone: item });
+  }
+  setGHGClassification(item) {
+    this.setState({ ghgClassification: item });
+  }
+  setGHSLabelElements(item) {
+    this.setState({ ghsLabelElements: item });
+  }
+  setSignalWord(item) {
+    this.setState({ signalWord: item });
+  }
+  setHazardStatement(item) {
+    this.setState({ hazardStatement: item });
+  }
+  setPrevention(item) {
+    this.setState({ prevention: item });
+  }
+  setResponse(item) {
+    this.setState({ response: item });
+  }
+  setStorage(item) {
+    this.setState({ storage: item });
+  }
+  setDisposal(item) {
+    this.setState({ disposal: item });
+  }
+  setOtherHazards(item) {
+    this.setState({ otherHazards: item });
+  }
+
+  saveSDSForm() {
+    console.log("tradeName: ", this.state.tradeName);
+    console.log("synonyms: ", this.state.synonyms);
+    console.log("productCode: ", this.state.productCode);
+    console.log("use: ", this.state.use);
+    console.log("company: ", this.state.company);
+    console.log("address: ", this.state.address);
+    console.log("telephone: ", this.state.telephone);
+    console.log("email: ", this.state.email);
+    console.log("emergencyTelephone: ", this.state.emergencyTelephone);
+    console.log("GHG Classification: ", this.state.ghgClassification);
+    console.log("GHS Label Elements: ", this.state.ghsLabelElements);
+    console.log("signal word: ", this.state.signalWord);
+    console.log("hazard statement: ", this.state.hazardStatement);
+    console.log("prevention: ", this.state.prevention);
+    console.log("response: ", this.state.response);
+    console.log("storage: ", this.state.storage);
+    console.log("disposal: ", this.state.disposal);
+    console.log("otherhazards: ", this.state.otherHazards);
   }
 
   handleChange(event) {
@@ -49,8 +155,12 @@ export default class NewSDSFromComponent extends Component {
         <div className="Container">
           <hr></hr>
           <h4>NEW SDS FORM</h4>
+          <button className="btn btn=s" onClick={this.saveSDSForm}>
+            Save SDS Form
+          </button>
           <hr></hr>
         </div>
+
         <Tab.Container id="left-tabs-example" defaultActiveKey="1">
           <Row>
             <Col sm={3}>
@@ -108,10 +218,36 @@ export default class NewSDSFromComponent extends Component {
             <Col sm={9}>
               <Tab.Content>
                 <Tab.Pane eventKey="1">
-                  <SDS_SectionOne />
+                  <SDS_SectionOne
+                    data={{
+                      setTradeName: this.setTradeName.bind(this),
+                      setSynonyms: this.setSynonyms.bind(this),
+                      setProductCode: this.setProductCode.bind(this),
+                      setUse: this.setUse.bind(this),
+                      setCompany: this.setCompany.bind(this),
+                      setAddress: this.setAddress.bind(this),
+                      setTelephone: this.setTelephone.bind(this),
+                      setEmail: this.setEmail.bind(this),
+                      setEmergencyTelephone:
+                        this.setEmergencyTelephone.bind(this),
+                    }}
+                  />
                 </Tab.Pane>
                 <Tab.Pane eventKey="2">
-                  <SDS_SectionTwo />
+                  <SDS_SectionTwo
+                    data={{
+                      setGHGClassification:
+                        this.setGHGClassification.bind(this),
+                      setGHSLabelElements: this.setGHSLabelElements.bind(this),
+                      setSignalWord: this.setSignalWord.bind(this),
+                      setHazardStatement: this.setHazardStatement.bind(this),
+                      setPrevention: this.setPrevention.bind(this),
+                      setResponse: this.setResponse.bind(this),
+                      setStorage: this.setStorage.bind(this),
+                      setDisposal: this.setDisposal.bind(this),
+                      setOtherHazards: this.setOtherHazards.bind(this),
+                    }}
+                  />
                 </Tab.Pane>
                 <Tab.Pane eventKey="3">
                   <SDS_SectionThree />

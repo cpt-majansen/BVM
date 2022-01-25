@@ -197,6 +197,19 @@ export default class SDS_SectionTen extends Component {
             </Form.Group>
           </Form>
         </Row>
+        <Container>
+          <Row xs="auto">
+            <Col>
+              <div className="mt-2 col-md-12"></div>
+              <button className="btn btn=s" onClick={this.saveClicked}>
+                Save Section
+              </button>
+              <div className="mt-5 col-md-12"></div>
+            </Col>
+            <Col></Col>
+            <Col></Col>
+          </Row>
+        </Container>
 
         <div className="mt-2 col-md-12"></div>
         {/* <Row>
