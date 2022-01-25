@@ -10,10 +10,10 @@ import NewSDSFromComponent from "./NewSDSFormComponent";
 import ErrorComponent from "./ErrorComponent";
 import FooterComponent from "./FooterComponent";
 
-export default class TodoApp extends Component {
+export default class Main extends Component {
   render() {
     return (
-      <div className="TodoApp">
+      <div className="Main">
         <Router>
           <HeaderComponent />
           <Switch>
